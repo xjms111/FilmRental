@@ -1,6 +1,10 @@
 package com.xjms111.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.xjms111.entities.Review;
+import com.xjms111.repositories.ReviewRepository;
+
 import java.util.List;
 import java.util.Optional;
 

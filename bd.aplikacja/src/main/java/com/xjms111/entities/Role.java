@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Roles")
 public class Role {
+    public Role(String roleName) {
+        this.roleName = roleName;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,12 +14,6 @@ public class Role {
 
     @Column(unique = true, nullable = false)
     private String roleName;
-
-    public Role() {}
-
-    public Role(String roleName) {
-        this.roleName = roleName;
-    }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }

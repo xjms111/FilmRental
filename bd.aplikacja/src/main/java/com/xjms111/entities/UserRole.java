@@ -15,11 +15,11 @@ public class UserRole {
 
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
-    private RoleEntity role;
+    private Role role;
 
     public UserRole() {}
 
-    public UserRole(User user, RoleEntity role) {
+    public UserRole(User user, Role role) {
         this.user = user;
         this.role = role;
     }
@@ -30,6 +30,6 @@ public class UserRole {
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
 
-    public RoleEntity getRole() { return role; }
-    public void setRole(RoleEntity role) { this.role = role; }
+    public Role getRole() { return role; }
+    public void setRole(Role role) { this.role = role; }
 }

@@ -11,6 +11,7 @@ import java.util.Map;
 
 @Configuration
 public class DataSourceConfig {
+  
   @Value("${spring.datasource.db1.url}")
   private String db1Url;
 
@@ -78,7 +79,6 @@ public class DataSourceConfig {
     targetDataSources.put("db3", db3);
 
     dynamicDataSource.setTargetDataSources(targetDataSources);
-
     dynamicDataSource.setDefaultTargetDataSource(db2);
 
     return dynamicDataSource;
