@@ -1,8 +1,9 @@
 package com.xjms111.entities;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "UserRoles")
+@Table(name = "user_roles")
 public class UserRole {
 
     @Id
@@ -17,6 +18,7 @@ public class UserRole {
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
+    // Constructors, getters, and setters
     public UserRole() {}
 
     public UserRole(User user, Role role) {
@@ -24,12 +26,27 @@ public class UserRole {
         this.role = role;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public User getUser() { return user; }
-    public void setUser(User user) { this.user = user; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public Role getRole() { return role; }
-    public void setRole(Role role) { this.role = role; }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

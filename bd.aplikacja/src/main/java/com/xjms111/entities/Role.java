@@ -1,23 +1,38 @@
 package com.xjms111.entities;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Roles")
+@Table(name = "roles")
 public class Role {
-    public Role(String roleName) {
-        this.roleName = roleName;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "role_name", nullable = false, length = 50)
     private String roleName;
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    // Constructors, getters, and setters
+    public Role() {}
 
-    public String getRoleName() { return roleName; }
-    public void setRoleName(String roleName) { this.roleName = roleName; }
+    public Role(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
 }
